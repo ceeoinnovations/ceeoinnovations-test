@@ -7,10 +7,10 @@ import People from './components/People.js';
 
 
 Promise.all([
-      d3.csv("https://docs.google.com/spreadsheets/d/e/2PACX-1vSDp2eohTdft9FqTUidRuLgD675fvlOm653imLF6lS5oAfjGZFkNzYmREdS5cu0yQvUeEhlqaD4TffR/pub?output=csv"),
-      d3.csv("https://docs.google.com/spreadsheets/d/e/2PACX-1vTU27Jgb4L1K2x0BIIj_1ykcwRYBk7HYthA8dy5vqRgyxsj519xImlZAck34ju4hrDKJl0lhM5SDQM7/pub?output=csv"),
-      d3.csv("https://docs.google.com/spreadsheets/d/e/2PACX-1vQka0KPDQVSEPrSg9So_KLygCMEzDKTY0zNPJJiK2zqQbN4ykQeNFkOl85DAs9l-xi3r0hMz9_qa1Ix/pub?output=csv"), 
-      d3.csv("https://docs.google.com/spreadsheets/d/e/2PACX-1vRKR6OxmqVtY4axluhHwRsS7igl1X37l1Ect5g56zn_lBw9--L_I0OSc8yu-n5M6uPHA7FaN_bJuDdI/pub?output=csv") 
+      d3.csv("https://docs.google.com/spreadsheets/d/e/2PACX-1vQWHWeWDTmVlkihEIUGiNc7lofcA_idb_D37YDZbE3PnZJBGuOYKzxEBYgIICH2gj-7cvN4iLMU0Am4/pub?output=csv"),
+      d3.csv("https://docs.google.com/spreadsheets/d/e/2PACX-1vQmj9tmeplHm4rz6i83hSrmPR1kjZpP7vrZ7Ce635CnRm6DMUUWyJs2TGIoxN2cawwU0EDxnEkVo6Ip/pub?output=csv"),
+      d3.csv("https://docs.google.com/spreadsheets/d/e/2PACX-1vQc06WzfLUNTqwCihXC_i-CtXKUP5YObm4VcKGlO5tXRwSBflufHpwxmYLw5cUevdrYRXrp8a229-7A/pub?output=csv"), 
+      d3.csv("https://docs.google.com/spreadsheets/d/e/2PACX-1vSDucAT1VEx7gg3qRxwURLDBXm_Du7aT4lBGue-xWwr5KQ37bmr48ASP3Zo_xEQpx6UWPi006587LjV/pub?output=csv") 
       ])
       .then(([about, websites, projects, people]) => {
         const data = {about, websites, projects, people};
