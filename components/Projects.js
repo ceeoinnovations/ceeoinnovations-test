@@ -7,7 +7,7 @@ export default function Projects(projects){
     
     <section id="projects">
         <div class="wrapper">
-            <h1 class="title">CURRENT PROJECTS</h1>
+            <h1 class="title">All Projects</h1>
             <div class="filter text-center">
                 <input type="radio" name="project-filter" id="prj-item1" value="all">
                 <label for="prj-item1">All</label>

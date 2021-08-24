@@ -13,7 +13,6 @@ export default function MainPage(data){
         ${About(data.about)}
         ${Website(data.websites)}
         ${Projects(data.projects)}
-        ${People(data.people)}
         ${Footer(data.about)}
     `
     stringToArray(data.projects);

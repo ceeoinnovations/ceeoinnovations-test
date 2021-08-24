@@ -1,9 +1,9 @@
 export default function Website(websites){
     return `
 
-    <section id="websites">
+    <section id="featured">
         <div class="wrapper">
-            <h1 class="title">PARTNER WEBSITES</h1>
+            <h1 class="title">Featured Projects</h1>
             <p class="text-center">
             </p>
             <div class="website-list">
@@ -25,7 +25,6 @@ export function WebsiteItems(websites){
                     <div class="project-subtitle">
                         ${d.description}<br>
                     </div>
-                    <img src="${d.logo}" div class="box-logo">
                 </div>
             </div> 
         </div>

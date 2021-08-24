@@ -13,9 +13,6 @@ export default function Navbar(page, items){
             <li>
                 <a href="#projects">PROJECTS</a>
             </li>
-            <li>
-                <a href="#people">PEOPLE</a>
-            </li>
             `
             )}
         </ul>
