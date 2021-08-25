@@ -172,7 +172,7 @@ section{
 }
 .text-wrapper{
     max-width: 1024px;
-    width: 70%;
+    width: 50%;
     margin: 0 auto;
     box-sizing: border-box;
     flex-wrap: wrap;
@@ -184,7 +184,7 @@ section{
 }
 
 .intro-content{
-    width: 50%;
+    width: 70%;
     margin: 0 auto;
 }
 
@@ -386,7 +386,7 @@ section{
     background-size: cover;
     background-attachment: fixed;
     background-color: #51d294;
-    background-image: url(/assets/global/background.png);
+    background-image: url(assets/global/background.png);
     overflow: hidden;
 }
 
@@ -699,10 +699,6 @@ color: #FEFA91;
     display: block;
 }
 
-.intro-logo{
-    width: 60%;
-    display: block;
-}
 
 .project-content{
     padding-right: 10px;
