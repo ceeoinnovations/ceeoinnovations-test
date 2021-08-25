@@ -5,7 +5,7 @@ export default function About(about){
                 <div class="intro-content">
                     <br>
                     <br>
-                    <img src="/assets/global/CI-logo-center.png" div class="logo">
+                    <img src="assets/global/CI-logo-center.png" div class="logo">
                 </div>
                 <p class="intro-p">${about[0].description}</p>
             </div>
