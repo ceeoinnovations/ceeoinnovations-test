@@ -3,9 +3,13 @@ html, body {
     padding: 0;
 }
 
+h1, h2, h3, h4, h5, h6, .title{
+    font-family: 'DM Sans', 'Press Start 2P', "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+}
+
 body {
     /* font-family: 'Roboto', "Segoe UI", "Helvetica Neue", Arial, sans-serif; */
-    font-family: 'Roboto','Inter', "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    font-family: 'Inter', "Segoe UI", "Helvetica Neue", Arial, sans-serif;
     /* Questrial  Manrope   Gothic A1  Inter font-family: 'Google Sans', "Segoe UI", "Helvetica Neue", Arial, sans-serif; */
     font-size: calc(1.1 * 1rem);
     line-height: 1.8em;
@@ -25,9 +29,9 @@ body {
 section .title{
     font-family: 'DM Sans', 'Press Start 2P', "Segoe UI", "Helvetica Neue", Arial, sans-serif;
     /* VT323   Press Start 2P   Lexend*/
-    font-size: 1.8rem;
+    font-size: 2.6rem;
     text-align: center;
-    font-weight: black;
+    font-weight: 700;
     line-height: 1.6em;
 }
 
