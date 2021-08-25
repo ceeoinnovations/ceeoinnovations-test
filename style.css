@@ -488,6 +488,13 @@ section{
     margin-bottom: 30px;
 }
 
+.caption {
+    font-size: 1em;
+    color: #a7a6a6;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
 .project-subtitle{
     color: #a7a6a6;
     line-height: 1.4em;

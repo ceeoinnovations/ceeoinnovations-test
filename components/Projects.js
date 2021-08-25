@@ -1,7 +1,7 @@
 import MaterialIcon from './MaterialIcon.js';
 export default function Projects(projects){
     let FeaturedProjects = projects.filter(d=>{
-        return d.tag2 === 'Ongoing';
+        return d.tag2 === '';
     });
     return `
     
@@ -9,13 +9,13 @@ export default function Projects(projects){
         <div class="wrapper">
             <h1 class="title">All Projects</h1>
             <div class="filter text-center">
-                <input type="radio" name="project-filter" id="prj-item1" value="all">
+                <input type="radio" name="project-filter" id="prj-item1" value="all" checked>
                 <label for="prj-item1">All</label>
 
                 <input type="radio" name="project-filter" id="prj-item2" value="featured">
                 <label for="prj-item2">Featured</label>
 
-                <input type="radio" name="project-filter" id="prj-item3" value="ongoing" checked>
+                <input type="radio" name="project-filter" id="prj-item3" value="ongoing">
                 <label for="prj-item3">Ongoing</label>
 
                 <input type="radio" name="project-filter" id="prj-item4" value="completed">
