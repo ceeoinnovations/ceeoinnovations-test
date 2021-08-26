@@ -30,7 +30,8 @@ export function ProjectDetail(d){
                         </div>
                         <p class="project-desc">
                             ${d.desc}
-                        </p>
+                        </p><br>
+                        ${Publications(d)}
                     </div>
                 </div>
                 <div class="col-7">
