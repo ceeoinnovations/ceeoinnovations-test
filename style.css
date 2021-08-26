@@ -4,7 +4,7 @@ html, body {
 }
 
 h1, h2, h3, h4, h5, h6, .title{
-    font-family: 'DM Sans', 'Press Start 2P', "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    font-family: 'DM Sans', "Segoe UI", "Helvetica Neue", Arial, sans-serif;
 }
 
 body {
@@ -27,7 +27,7 @@ body {
 
 
 section .title{
-    font-family: 'DM Sans', 'Press Start 2P', "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    font-family: 'DM Sans', "Segoe UI", "Helvetica Neue", Arial, sans-serif;
     /* VT323   Press Start 2P   Lexend*/
     font-size: 2.6rem;
     text-align: center;

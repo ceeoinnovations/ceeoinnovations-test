@@ -20,7 +20,7 @@ export function WebsiteItems(websites){
                 <div class="info">
                     <div class="project-overview">
                         <div class="project-title">
-                            <a href="${d.link}" target="_blank"><strong>${d.title}</strong></a>
+                            <a href="${d.link}"><strong>${d.title}</strong></a>
                         </div>
                     <div class="project-subtitle">
                         ${d.description}<br>

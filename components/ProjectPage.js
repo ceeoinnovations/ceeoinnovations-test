@@ -133,7 +133,7 @@ export function ProjectImages(d) {
             <img src="${getImageURL(d.image4)}" div class="project-teaser">
             <p class="caption">${d.image4caption}</p>
         `
-    }else if (d.image5!=="") {
+    }else if (d.image6==="") {
         return `
             <img src="${getImageURL(d.image1)}" div class="project-teaser">
             <p class="caption">${d.image1caption}</p>
@@ -145,6 +145,21 @@ export function ProjectImages(d) {
             <p class="caption">${d.image4caption}</p>
             <img src="${getImageURL(d.image5)}" div class="project-teaser">
             <p class="caption">${d.image5caption}</p>
+        `
+    }else if (d.image6!=="") {
+        return `
+            <img src="${getImageURL(d.image1)}" div class="project-teaser">
+            <p class="caption">${d.image1caption}</p>
+            <img src="${getImageURL(d.image2)}" div class="project-teaser">
+            <p class="caption">${d.image2caption}</p>
+            <img src="${getImageURL(d.image3)}" div class="project-teaser">
+            <p class="caption">${d.image3caption}</p>
+            <img src="${getImageURL(d.image4)}" div class="project-teaser">
+            <p class="caption">${d.image4caption}</p>
+            <img src="${getImageURL(d.image5)}" div class="project-teaser">
+            <p class="caption">${d.image5caption}</p>
+            <img src="${getImageURL(d.image6)}" div class="project-teaser">
+            <p class="caption">${d.image6caption}</p>
         `
     }
 }
@@ -174,6 +189,21 @@ export function LinkButton(label, link) {
     }else {
         return `
             <a class="link-button" href="${label}" target="_blank">${link}</a>
+        `
+    }
+}
+
+export function Publications(d) {
+    if (d.publication1===""){
+        return '';
+    }else {
+        return `
+        <h1>Pulications</h1>
+        <p>
+            <a href="${d.publication1link}">${d.publication1}</a>
+            <br>
+            <a href="${d.publication2link}">${d.publication2}</a>
+        </p>
         `
     }
 }
