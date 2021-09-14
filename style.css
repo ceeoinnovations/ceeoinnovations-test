@@ -42,7 +42,7 @@ section .title{
 }
 
 .container{
-    /* max-width:1024px; */
+    max-width:2024px;
     width:100%;
     margin: 0 auto;
     /* padding:50px 20px 20px 20px;  */
@@ -285,7 +285,6 @@ section{
     margin-right: auto;
     width: 100%;
     height: 110px;
-    object-fit: cover;
 }
 
 .people-thumbnail{
@@ -294,7 +293,6 @@ section{
     /* width: 800px; */
     /* height:370px; */
     /* flex-basis: 6em; */
-    object-fit:cover;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -657,6 +655,34 @@ color: #FEFA91;
     box-shadow: 0 10px 20px rgb(0 0 0 / 30%);
 }
 
+.website-teaser{
+    border-radius: 5px 5px 0px 0px;
+    width: 100%;
+    object-fit:cover;
+    display: block;
+}
+
+/* .carousel-box{
+    flex-basis: 30em;
+    border-radius: 5px;
+    background-color:#fff;
+    margin: 15px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 3px 10px;
+    -moz-box-shadow: rgba(0,0,0,0.3) 0 3px 10px;
+    box-shadow: 0 10px 20px rgb(0 0 0 / 10%);
+}
+
+.carousel-box:hover{
+    box-shadow: 0 10px 20px rgb(0 0 0 / 30%);
+}
+
+.carousel-teaser{
+    border-radius: 5px 5px 0px 0px;
+    width: 100%;
+    object-fit:cover;
+    display: block;
+} */
+
 .project-item{
     flex-basis: 100em;
     border-radius: 5px;
@@ -745,13 +771,6 @@ color: #FEFA91;
     font-size: 0.9rem;
 }
 
-.website-teaser{
-    border-radius: 5px 5px 0px 0px;
-    width: 100%;
-    object-fit:cover;
-    display: block;
-}
-
 .box-logo{
     margin-top: 20px;
     width: 80%;
@@ -801,6 +820,133 @@ color: #FEFA91;
     color: #fff;
     font-weight: bold;
   }
+
+
+.carousel {
+    position: relative;
+    /* box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64); */
+    margin: 80px auto;
+    max-width: 1024px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 3px 10px;
+    -moz-box-shadow: rgba(0,0,0,0.3) 0 3px 10px;
+    box-shadow: 0 10px 20px rgb(0 0 0 / 10%);
+    
+}
+
+.carousel-inner {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    object-fit: cover;
+    width: 100%;
+    height: 500px;
+    border-radius: 5px;
+}
+
+.carousel-open:checked + .carousel-item {
+    position: static;
+    opacity: 100;
+}
+
+.carousel-item {
+    position: absolute;
+    opacity: 0;
+    -webkit-transition: opacity 0.6s ease-out;
+    transition: opacity 0.6s ease-out;
+}
+
+.carousel-item img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+.carousel-control {
+    /* background: rgba(0, 0, 0, 0.28); */
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+    font-size: 40px;
+    height: 40px;
+    line-height: 35px;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    cursor: pointer;
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    text-align: center;
+    width: 40px;
+    z-index: 10;
+}
+
+.carousel-control.prev {
+    left: 2%;
+}
+
+.carousel-control.next {
+    right: 2%;
+}
+
+.carousel-control:hover {
+    /* background: rgba(0, 0, 0, 0.8); */
+    color: #aaaaaa;
+}
+
+#carousel-1:checked ~ .control-1,
+#carousel-2:checked ~ .control-2,
+#carousel-3:checked ~ .control-3 {
+    display: block;
+}
+
+.carousel-indicators {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: 2%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 10;
+}
+
+.carousel-indicators li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.carousel-bullet {
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font-size: 35px;
+}
+
+.carousel-bullet:hover {
+    color: #aaaaaa;
+}
+
+#carousel-1:checked ~ .control-1 ~ .carousel-indicators li:nth-child(1) .carousel-bullet,
+#carousel-2:checked ~ .control-2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
+#carousel-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet {
+    color: #51D294;
+}
+
+#title {
+    width: 100%;
+    position: absolute;
+    padding: 0px;
+    margin: 0px auto;
+    text-align: center;
+    font-size: 27px;
+    color: rgba(255, 255, 255, 1);
+    font-family: 'Open Sans', sans-serif;
+    z-index: 9999;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33), -1px 0px 2px rgba(255, 255, 255, 0);
+}
+
 @media only screen and (min-width: 768px) {
     /* 768 */
     .col-1 {flex-basis: 8.33%;}
@@ -898,3 +1044,106 @@ color: #FEFA91;
     border-radius: 25px;
     border: 1.5px solid rgba(49, 56, 150, 0.1);
 }
+
+
+/* external css: flickity.css */
+.main-carousel {
+  /* background: #EEE; */
+  border-radius: 5px;
+  height: 400px;
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+
+.gallery-cell {
+  width: 100%; /* half-width */
+  height: 400px;
+  margin-right: 10px;
+  background: #8C8;
+  counter-increment: gallery-cell;
+  border-radius: 5px;
+  
+}
+
+/* cell number */
+.gallery-cell:before {
+  display: block;
+  text-align: center;
+  content: counter(gallery-cell);
+  line-height: 400px;
+  font-size: 80px;
+  color: white;
+}
+
+.carousel-image {
+    min-width: 400px;
+    height: 400px;
+}
+
+.main-carousel:after {
+    content: 'flickity';
+    display: none; /* hide :after */
+  }
+  
+@media screen and ( min-width: 768px ) {
+    /* disable Flickity for large devices */
+    .main-carousel:after {
+        content: '';
+    }
+}
+
+.carousel-cell-image {
+    display: block;
+    max-height: 100%;
+    margin: 0 auto;
+    max-width: 100%;
+    opacity: 0;
+    -webkit-transition: opacity 0.4s;
+            transition: opacity 0.4s;
+  }
+  
+  /* fade in lazy loaded image */
+  .carousel-cell-image.flickity-lazyloaded,
+  .carousel-cell-image.flickity-lazyerror {
+    opacity: 1;
+  }
+  
+/* position dots up a bit */
+.flickity-page-dots {
+    bottom: -22px;
+}
+/* dots are lines */
+.flickity-page-dots .dot {
+    height: 4px;
+    width: 40px;
+    margin: 0;
+    border-radius: 0;
+}
+
+.carousel {
+    background: #FAFAFA;
+  }
+  
+  .carousel-cell {
+    width: 66%;
+    height: 400px;
+    margin-right: 10px;
+    background: #333;
+  }
+  
+  .carousel-cell-image {
+    display: block;
+    max-height: 100%;
+    margin: 0 auto;
+    max-width: 100%;
+    opacity: 0;
+    -webkit-transition: opacity 0.4s;
+            transition: opacity 0.4s;
+  }
+  
+  /* fade in lazy loaded image */
+  .carousel-cell-image.flickity-lazyloaded,
+  .carousel-cell-image.flickity-lazyerror {
+    opacity: 1;
+  }
+  

@@ -1,13 +1,15 @@
+import fileIdFrom, {getImageURL} from './Images.js';
 import MaterialIcon from './MaterialIcon.js';
+
+// return HTML for project section
 export default function Projects(projects){
-    let FeaturedProjects = projects.filter(d=>{
-        return d.tag2 === '';
+    // decide what projects will show as default
+    let defaultProjects = projects.filter(d=>{
+        return d.status === 'Ongoing'; // filter by status
     });
     return `
-    
     <section id="projects">
         <div class="wrapper">
-            <h1 class="title">All Projects</h1>
             <div class="filter text-center">
                 <input type="radio" name="project-filter" id="prj-item1" value="all" checked>
                 <label for="prj-item1">All</label>
@@ -29,29 +31,17 @@ export default function Projects(projects){
                 
             </div>
             <div class="project-list">
-                ${ProjectItems(FeaturedProjects)}
+                ${ProjectItems(projects)}
             </div>
         </div>
-    </section>`;
+    </section>`
 }
 
+// return HTML for project items
 export function ProjectItems(projects){
-    let getTeaserURL = (image)=>{
-        if (image===""){
-            return 'assets/global/project-placeholder.png';
-        }else if (image.startsWith("http") && image.includes("drive.google.com")){
-            let id = "";
-            const url = new URL(image);
-            id = templateIdFrom(url);
-            // console.log('id: ' + id);
-            return `https://drive.google.com/uc?id=${id}`;
-        }else{
-            return image;
-        }
-    }
     return projects.map(d=>`
         <div class="project-box">
-                <img src="${getTeaserURL(d.teaser)}" div class="teaser">
+                <img src="${getImageURL(d.teaser)}" div class="teaser">
                 <div class="info">
                     <div class="project-overview">
                         <div class="project-tags">
@@ -67,44 +57,25 @@ export function ProjectItems(projects){
                 </div>
             </div> 
         </div>
-        `).join('');
+    `).join('');
 }
 
-export function Tag(tags){
-
-}
-export function templateIdFrom(url) {
-    url.toString();
-    let match = url.href.match(/([a-z0-9_-]{25,})[$/&?]/i);
-    return match[1];
-    // 1. /([a-z0-9_-]{25,})[$/&?]/i
-    // 2. /\/d\/(.+)\//
-}
-
-export function stringToArray(projects){
-    projects.map(d => {
-        d.tags = d.tags.split(', ').map(s=>s.trim());
-    })
-}
-
+// filter projects by tags
 export function handleProjectFilter(data){
     let conds = document.querySelectorAll('.filter input[name="project-filter"]');
-    // console.log(typeof conds);
     conds.forEach(cond=>cond.addEventListener('change', function(event){
-        
-        let checked = event.target.value; //Array.from(conds).filter(d=>d.checked).map(d=>d.value);
+        let checked = event.target.value; 
         if (checked==='all'){
-            console.log('all clicked');
-            document.querySelector('.project-list').innerHTML = ProjectItems(data.projects);
+            // show all projects except for private ones
+            let AllProjects = data.projects.filter(d=>{
+                return d.status !== 'Private'; 
+            });
+            document.querySelector('.project-list').innerHTML = ProjectItems(AllProjects);
         }else{
             let filtered = data.projects.filter(d=>{
                 return d.tags.some(tag=>checked === tag.toLowerCase());
             });
-            console.log('filtered', filtered);
-        
             document.querySelector('.project-list').innerHTML = ProjectItems(filtered);
         }
-    
     }));
-    
 }
