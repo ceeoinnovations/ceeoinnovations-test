@@ -49,7 +49,6 @@ export function ProjectDetail(d){
 
 // return HTML to display video
 export function EmbedVideo(video){
-    console.log(video);
     if (video===""){ // in case of no video
         return '';
     }else if (video.startsWith("http") && video.includes("drive.google.com")){ // in case of google link

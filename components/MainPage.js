@@ -1,6 +1,6 @@
 import Navbar from './Navbar.js';
 import About from './About.js';
-import Website from './Websites.js';
+import Carousel from './Carousel.js';
 import Footer from './Footer.js';
 import Projects, {handleProjectFilter} from './Projects.js';
 import People, {handlePeopleFilter} from './People.js';
@@ -10,7 +10,7 @@ export default function MainPage(data){
     document.querySelector('.container').innerHTML = `
         ${Navbar('main', Object.keys(data))}
         ${About(data.about)}
-        ${Website(data.projects)}
+        ${Carousel(data.projects)}
         ${Projects(data.projects)}
         ${Footer(data.about)}
     `
