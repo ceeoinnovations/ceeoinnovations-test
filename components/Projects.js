@@ -20,7 +20,7 @@ export default function Projects(projects){
                 <input type="radio" name="project-filter" id="prj-item3" value="technology">
                 <label for="prj-item3">Technology</label>
 
-                <input type="radio" name="project-filter" id="prj-item4" value="teachingtool">
+                <input type="radio" name="project-filter" id="prj-item4" value="teaching tool">
                 <label for="prj-item4">Teaching Tool</label>
             </div>
             <div class="project-list">
@@ -58,6 +58,7 @@ export function handleProjectFilter(data){
     let conds = document.querySelectorAll('.filter input[name="project-filter"]');
     conds.forEach(cond=>cond.addEventListener('change', function(event){
         let checked = event.target.value; 
+        console.log(checked);
         if (checked==='all'){
             // show all projects except for private ones
             let AllProjects = data.projects.filter(d=>{
@@ -66,6 +67,7 @@ export function handleProjectFilter(data){
             document.querySelector('.project-list').innerHTML = ProjectItems(AllProjects);
         }else{
             let filtered = data.projects.filter(d=>{
+                console.log(d.tags);
                 return d.tags.some(tag=>checked === tag.toLowerCase());
             });
             document.querySelector('.project-list').innerHTML = ProjectItems(filtered);
