@@ -991,7 +991,6 @@ color: #FEFA91;
             transition: opacity 0.4s;
 }
 
-
 @media screen and ( min-width: 768px ) {
     /* disable Flickity for large devices */
     .main-carousel:after {
