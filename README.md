@@ -11,11 +11,8 @@
 .   
 |-- Links: doc that contains links to the website and GitHub page  
 |-- about: spreadsheets that contain basic information about the website  
-|-- people: spreadsheets that contain personal information of the lab members  
-|-- projects: spreadsheets that contain project information created at the lab  
-|-- websites: spreadsheets that contain partner website informatiion   
-|-- assets: directory with any images/videos needed  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- people: headshot images    
+|-- projects: spreadsheets that contain project information created at the lab    
+|-- assets: directory with any images/videos needed to build the website   
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- project-id: images/videos for a specific project  
 
 ## Source Code Directory Structure
