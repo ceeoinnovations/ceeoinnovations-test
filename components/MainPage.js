@@ -15,7 +15,6 @@ export default function MainPage(data){
         ${Footer(data.about)}
     `
     stringToArray(data.projects);
-    stringToArray(data.people);
     handleProjectFilter(data);
     handlePeopleFilter(data);
 

@@ -8,10 +8,9 @@ import People from './components/People.js';
 Promise.all([
       d3.csv("https://docs.google.com/spreadsheets/d/e/2PACX-1vQWHWeWDTmVlkihEIUGiNc7lofcA_idb_D37YDZbE3PnZJBGuOYKzxEBYgIICH2gj-7cvN4iLMU0Am4/pub?output=csv"),
       d3.csv("https://docs.google.com/spreadsheets/d/e/2PACX-1vQc06WzfLUNTqwCihXC_i-CtXKUP5YObm4VcKGlO5tXRwSBflufHpwxmYLw5cUevdrYRXrp8a229-7A/pub?output=csv"), 
-      d3.csv("https://docs.google.com/spreadsheets/d/e/2PACX-1vSDucAT1VEx7gg3qRxwURLDBXm_Du7aT4lBGue-xWwr5KQ37bmr48ASP3Zo_xEQpx6UWPi006587LjV/pub?output=csv") 
       ])
-      .then(([about, projects, people]) => {
-        const data = {about, projects, people};
+      .then(([about, projects]) => {
+        const data = {about, projects};
         // console.log(data);
 
     // determine what page to render
