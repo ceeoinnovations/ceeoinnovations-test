@@ -2,7 +2,6 @@
 import MainPage from './components/MainPage.js';
 import ProjectPage from './components/ProjectPage.js';
 import Navbar from './components/Navbar.js';
-import People from './components/People.js';
 
 // load csv files and populate data
 Promise.all([

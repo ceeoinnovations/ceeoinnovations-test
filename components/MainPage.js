@@ -3,7 +3,6 @@ import About from './About.js';
 import Carousel from './Carousel.js';
 import Footer from './Footer.js';
 import Projects, {handleProjectFilter} from './Projects.js';
-import People, {handlePeopleFilter} from './People.js';
 
 // create mainpage (home)
 export default function MainPage(data){
@@ -16,7 +15,6 @@ export default function MainPage(data){
     `
     stringToArray(data.projects);
     handleProjectFilter(data);
-    handlePeopleFilter(data);
 
     let flkty = new Flickity( '.main-carousel', {
         // options
