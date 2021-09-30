@@ -35,6 +35,10 @@ section .title{
     line-height: 1.6em;
 }
 
+section .title-small{
+    text-align: center;
+}
+
 .nav-title{
     font-family: 'DM Sans', "Segoe UI", "Helvetica Neue", Arial, sans-serif;
     font-size: 1.1rem;
@@ -473,6 +477,7 @@ section{
     line-height: 1.4em;
 }
 
+
 .project-desc{
     /* margin-top: 80px; */
     margin-right: 100px;
@@ -507,6 +512,45 @@ section{
     align-items: flex-start;
     flex-direction: row;
 }
+
+.website-info{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.85), transparent);
+    padding-top: 30px;
+    border-radius: 5px;
+}
+
+.website-subtitle{
+    line-height: 1.4em;
+}
+
+.website-title{
+    font-family: 'DM Sans', "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    font-size: 1.35rem;
+    margin-bottom: 10px;
+}
+
+
+/* 
+.website-info .project-overview{
+    color: #51d294;
+} */
+/* 
+.website-info .project-title{
+    color: #fff;
+}
+
+.website-info .project-subtitle{
+    color: #fff;
+} */
 
 .project-teaser{
     /* border-radius: 5px; */
@@ -614,22 +658,29 @@ color: #FEFA91;
 }
 
 .website-box{
+    position: relative;
+    display: block;
     flex-basis: 18em;
     border-radius: 5px;
     background-color:#fff;
+    color: #fff;
     margin: 15px;
     -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 3px 10px;
     -moz-box-shadow: rgba(0,0,0,0.3) 0 3px 10px;
-    box-shadow: 0 10px 20px rgb(0 0 0 / 10%);
 }
 
 .website-box:hover{
     box-shadow: 0 10px 20px rgb(0 0 0 / 30%);
 }
 
+/* .website-box a:hover{
+    color: #51d294;
+} */
+
 .website-teaser{
-    border-radius: 5px 5px 0px 0px;
+    border-radius: 5px;
     width: 100%;
+    height: 300px;
     object-fit:cover;
     display: block;
 }
