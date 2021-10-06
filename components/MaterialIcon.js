@@ -7,5 +7,7 @@ export default function MaterialIcon(type){
             return '<i class="fas fa-video"></i>';
         case 'Demo':
             return '<i class="fas fa-desktop"></i>';
+        case 'ExternalLink':
+            return '<i class="fas fa-external-link-alt"></i>';
     }
 }

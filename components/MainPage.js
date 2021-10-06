@@ -11,17 +11,19 @@ export default function MainPage(data){
         ${Navbar('main', Object.keys(data))}
         ${About(data.about)}
         ${Carousel(data.projects)}
-        ${Website(data.websites)}
         ${Projects(data.projects)}
+        ${Website(data.websites)}
         ${Footer(data.about)}
     `
     stringToArray(data.projects);
     handleProjectFilter(data);
 
-    let flkty = new Flickity( '.main-carousel', {
+    let flkty = new Flickity( '.carousel', {
         // options
         cellAlign: 'center',
-        contain: true
+        contain: true,
+        autoPlay: true,
+        wrapAround: true
     });
 }
 

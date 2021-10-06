@@ -20,7 +20,7 @@ export function ProjectDetail(d){
             <div class="row">
                 <div class="col-5">
                     <div class="project-content">
-                        <h1 class="title" style="margin-top: 40px; margin-bottom: 30px; text-align: left;">${d.title}</h1>
+                        <h1 class="title" style="margin-top: 40px; margin-bottom: 10px; text-align: left;">${d.title}</h1>
                         <div class="project-subtitle" style="color: #000000;">
                             ${d.subtitle}
                         </div>
@@ -169,7 +169,7 @@ export function LinkButton(label, link) {
         return '';
     }else {
         return `
-            <a class="link-button" href="${label}" target="_blank">${link}</a>
+            <a class="link-button" href="${label}" target="_blank">${link} ${MaterialIcon("ExternalLink")}</a>
         `
     }
 }

@@ -38,7 +38,7 @@ export function ProjectItems(projects){
             <div class="info">
                 <div class="project-overview">
                     <div class="project-tags">
-                        ${d.year}
+                        ${d.maturity}
                     </div>
                     <div class="project-title">
                         <strong>${d.title}</strong>

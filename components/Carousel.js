@@ -9,7 +9,7 @@ export default function Carousel(projects){
     return `
     <section id="carousel">
         <div class="wrapper">
-            <div class="main-carousel"  data-flickity-options='{"imagesLoaded": true, "freeScroll": true, "autoPlay": true, "contain": true, "wrapAround": true }'>
+            <div class="carousel">
                 ${CarouselItems(defaultProjects)}
             </div>
         </div>
@@ -21,8 +21,13 @@ export default function Carousel(projects){
 export function CarouselItems(projects){
     return projects.map(d=>`
     <div class="carousel-cell">
+        <a href="?project=${d.id}" class="carousel-cell-content">
         <img src="${getImageURL(d.teaser)}" alt="orange tree" />
-        <div class="card__content"><a href="?project=${d.id}"><h2>${d.title}</h2><p>${d.subtitle}</p></a></div>
+            <div class="card__content">
+                <h2>${d.title}</h2><p>${d.subtitle}</p>
+            <a class="button" href="?project=${d.id}">VIEW</a>
+            </div>
+        </a>
     </div>
     `).join('');
 }
