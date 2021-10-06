@@ -25,9 +25,7 @@ export function ProjectDetail(d){
                             ${d.subtitle}
                         </div>
                         ${ProjectLinks(d)}
-                        <div class="project-authors" style="color: #a7a6a6;">
-                            By ${d.authors}
-                        </div>
+                        ${ProjectAuthors(d)}
                         <p class="project-desc">
                             ${d.desc}
                         </p>
@@ -160,6 +158,18 @@ export function ProjectLinks(d) {
                 ${LinkButton(d.link5, d.link6label)}
             </div>
         `
+    }
+}
+
+export function ProjectAuthors(d) {
+    if (d.authors==="") {
+        return '';
+    }else {
+        return `
+        <div class="project-authors" style="color: #a7a6a6;">
+            By ${d.authors}
+        </div>
+    `
     }
 }
 
