@@ -22,7 +22,7 @@ export default function MainPage(data){
         // options
         cellAlign: 'center',
         contain: true,
-        autoPlay: true,
+        autoPlay: 1800,
         wrapAround: true
     });
 }
