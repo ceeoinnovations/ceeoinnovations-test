@@ -919,6 +919,7 @@ nav{
     .intro .title{font-size: 1.6rem; text-align: left;}
     .text-wrapper{width: 80%;}
     .project-desc{margin-right: 0px;}
+    nav ul li:last-child {margin-right: 0px;}
 }
 
 .search {
@@ -1035,9 +1036,3 @@ nav{
     }
 }
 
-
-@media screen and ( min-width: 768px ) {
-    .carousel-cell img {
-      /* height: 400px; */
-    }
- }
