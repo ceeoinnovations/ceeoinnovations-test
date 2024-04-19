@@ -894,9 +894,9 @@ nav{
     .col-2 {flex-basis: 16.66%;}
     .col-3 {flex-basis: 25%;}
     .col-4 {flex-basis: 33.33%;}
-    .col-5 {flex-basis: 41.66%;}
+    .col-5 {flex-basis: 60%;}
     .col-6 {flex-basis: 50%;}
-    .col-7 {flex-basis: 58.33%;}
+    .col-7 {flex-basis: 40%;}
     .col-8 {flex-basis: 66.66%;}
     .col-9 {flex-basis: 75%;}
     .col-10 {flex-basis: 83.33%;}
